@@ -1,0 +1,17 @@
+{
+	"manifest_version": 3,
+	"name": "chat gpt",
+	"version": "1.0",
+	"description": "",
+	"content_scripts": [
+		{
+			"matches": ["*://chat.openai.com/chat*"],
+			"js": ["content.js"],
+			"css": ["style.css"]
+		}
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": ["tabs", "clipboard"]
+}

@@ -1,0 +1,36 @@
+/* copyBtn.style.border = '1px solid #0ca37f'
+copyBtn.style.width = '80px'
+copyBtn.style.height = '30px'
+copyBtn.style.borderRadius = '5px'
+copyBtn.style.position = 'absolute'
+copyBtn.style.top = '23px'
+copyBtn.style.left = '-148px' */
+.copy-btn {
+	border: 1px solid #0ca37f;
+	width: 80px;
+	height: 30px;
+	border-radius: 5px;
+	position: absolute;
+	top: 23px;
+	left: -148px;
+}
+
+.copy-btn:hover {
+	background-color: #0ca37f;
+	color: white;
+}
+
+.copy-btn:after {
+	content: '';
+	background: #90ee90;
+	display: block;
+	position: absolute;
+	opacity: 0;
+	transition: all 0.8s;
+}
+.copy-btn:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s;
+}
