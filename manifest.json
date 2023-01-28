@@ -3,6 +3,10 @@
 	"name": "chat gpt",
 	"version": "1.0",
 	"description": "",
+	"icons": {
+		"128": "./images/128.png",
+		"48": "./images/128.png"
+	},
 	"content_scripts": [
 		{
 			"matches": ["*://chat.openai.com/chat*"],

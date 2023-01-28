@@ -44,7 +44,6 @@ function createButton() {
 		chat.appendChild(copyBtn)
 
 		copyBtn.addEventListener('click', () => {
-			console.log(chat.childNodes[1].childNodes[0].innerText)
 			copyToClipBoard(chat.childNodes[1].childNodes[0].innerText)
 		})
 	}
