@@ -8,7 +8,7 @@ function copyToClipBoard(txt) {
 				navigator.clipboard
 					.writeText(txt)
 					.then(() => {
-						console.log(txt)
+						return
 					})
 					.catch((err) => {
 						console.error('Failed to copy text: ', err)
@@ -44,7 +44,8 @@ function createButton() {
 		chat.appendChild(copyBtn)
 
 		copyBtn.addEventListener('click', () => {
-			copyToClipBoard(chat.parentNode.childNodes[0].innerText)
+			console.log(chat.childNodes[1].childNodes[0].innerText)
+			copyToClipBoard(chat.childNodes[1].childNodes[0].innerText)
 		})
 	}
 }
