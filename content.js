@@ -1,5 +1,3 @@
-let prevQueriesnumber = undefined
-
 function copyToClipBoard(txt) {
 	navigator.permissions
 		.query({name: 'clipboard-write'})
@@ -8,16 +6,20 @@ function copyToClipBoard(txt) {
 				navigator.clipboard
 					.writeText(txt)
 					.then(() => {
-						return
+			      return
 					})
 					.catch((err) => {
-						console.error('Failed to copy text: ', err)
+						alert('error please try again')
+					  return
 					})
 			} else {
-				console.error('Permission to write to clipboard denied.')
+				 alert('Permission to write to clipboard denied by your settings')
+				return 
 			}
 		})
 }
+
+let prevQueriesnumber = undefined
 
 function createButton() {
 	const chats = document.querySelectorAll('.text-base')
@@ -55,3 +57,4 @@ function test() {
 	console.log('extension activated')
 }
 test()
+

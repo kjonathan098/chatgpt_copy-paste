@@ -34,3 +34,7 @@ copyBtn.style.left = '-148px' */
 	opacity: 1;
 	transition: 0s;
 }
+
+.copy-btn.red {
+	background:red;
+}
