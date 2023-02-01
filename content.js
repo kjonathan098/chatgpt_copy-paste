@@ -1,20 +1,22 @@
 function copyToClipBoard(txt) {
 	navigator.permissions
-		.query({name: 'clipboard-write'})
+		.query({ name: 'clipboard-write' })
 		.then((permissionStatus) => {
 			if (permissionStatus.state === 'granted') {
 				navigator.clipboard
 					.writeText(txt)
 					.then(() => {
-			      return
+						return
 					})
 					.catch((err) => {
 						alert('error please try again')
-					  return
+						return
 					})
 			} else {
-				 alert('Permission to write to clipboard denied by your settings')
-				return 
+				alert(
+					'Permission to write to clipboard denied by your settings'
+				)
+				return
 			}
 		})
 }
@@ -47,6 +49,15 @@ function createButton() {
 
 		copyBtn.addEventListener('click', () => {
 			copyToClipBoard(chat.childNodes[1].childNodes[0].innerText)
+			console.log('hello')
+			copyBtn.innerText = 'copied!'
+			copyBtn.style.background = '#0ca37f'
+			copyBtn.style.color = 'white'
+			setInterval(() => {
+				copyBtn.innerText = 'copy'
+				copyBtn.style.background = 'transparent'
+				copyBtn.style.color = 'black'
+			}, 2000)
 		})
 	}
 }
@@ -54,7 +65,6 @@ function createButton() {
 setInterval(createButton, 5000)
 
 function test() {
-	console.log('extension activated')
+	console.log('extension activated da')
 }
 test()
-
