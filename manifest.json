@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "ChatGPT Copy Button Extension",
-	"version": "1.02",
+	"version": "2.0",
 	"description": "Creates Copy button on every ChatGPT chat to simplify the copy-paste process, easy copy and eliminates unwanted formatting in paste",
 	"icons": {
 		"128": "./images/128.png",
@@ -11,7 +11,7 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["*://chat.openai.com/chat*"],
+			"matches": ["*://chat.openai.com/*"],
 			"js": ["content.js"],
 			"css": ["style.css"]
 		}
