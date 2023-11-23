@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "ChatGPT Copy Button Extension",
-	"version": "2.0",
+	"version": "3.0",
 	"description": "Creates Copy button on every ChatGPT chat to simplify the copy-paste process, easy copy and eliminates unwanted formatting in paste",
 	"icons": {
 		"128": "./images/128.png",
